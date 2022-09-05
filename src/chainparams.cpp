@@ -134,7 +134,7 @@ public:
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,68);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,176);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x08, 0x25, 0xB5, 0x18};
-        base58Prefixes[EXT_SECRET_KEY] = {0x02, 0x87, 0xAB, 0xE3};
+        base58Prefixes[EXT_SECRET_KEY] = {0x02, 0x87, 0xA4, 0xE3};
 
         bech32_hrp = "ltc";
         mweb_hrp = "ltcmweb";
@@ -149,7 +149,7 @@ public:
         checkpointData = {
             {
                 {  0, uint256S("1fb517d5756161a6033c9e3f4b3a9a13a8a192bfff10449bb7c28270b7933f50")},
-                
+
             }
         };
 
@@ -229,7 +229,7 @@ public:
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,110);
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,115);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        base58Prefixes[EXT_PUBLIC_KEY] = {0x05, 0x25, 0x67, 0xDF};
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x05, 0x25, 0x67, 0xD7};
         base58Prefixes[EXT_SECRET_KEY] = {0x05, 0x25, 0x93, 0x92};
 
         bech32_hrp = "tltc";
@@ -245,7 +245,7 @@ public:
         checkpointData = {
             {
                 {0, uint256S("59d4ff50fd4dddb429ebdd5c6c6584fba592d5f1d9c761f5afc0972d8244c091")},
-               
+
             }
         };
 
@@ -300,10 +300,10 @@ public:
         consensus.nMinimumChainWork = uint256{};
         consensus.defaultAssumeValid = uint256{};
 
-        pchMessageStart[0] = 0xfg;
-        pchMessageStart[1] = 0xbh;
+        pchMessageStart[0] = 0xf5;
+        pchMessageStart[1] = 0xb8;
         pchMessageStart[2] = 0xb6;
-        pchMessageStart[3] = 0xdf;
+        pchMessageStart[3] = 0xd9;
         nDefaultPort = 1998;
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 0;
