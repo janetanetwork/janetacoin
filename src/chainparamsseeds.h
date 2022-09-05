@@ -8,7 +8,7 @@
  */
 static const uint8_t chainparams_seed_main[] = {
 	
-    0xa1141c95,0x91194d2d,
+    0x0,0x0,
 };
 
 static const uint8_t chainparams_seed_test[] = {
