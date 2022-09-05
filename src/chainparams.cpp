@@ -104,16 +104,16 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xfb;
-        pchMessageStart[1] = 0xc0;
-        pchMessageStart[2] = 0xb6;
-        pchMessageStart[3] = 0xdb;
+        pchMessageStart[0] = 0xf8;
+        pchMessageStart[1] = 0xc5;
+        pchMessageStart[2] = 0xb3;
+        pchMessageStart[3] = 0xd9;
         nDefaultPort = 1997;
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 40;
         m_assumed_chain_state_size = 2;
 
-        genesis = CreateGenesisBlock(1662282067, 2085461989, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1662282067, 2085461989, 0x1e0ffff0, 1, 10000000 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("1fb517d5756161a6033c9e3f4b3a9a13a8a192bfff10449bb7c28270b7933f50"));
         assert(genesis.hashMerkleRoot == uint256S("007280f346412812a0c5f50a094998a41d8256aa31b63ef764d6e252f8f93532"));
@@ -133,8 +133,8 @@ public:
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,23);
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,68);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,176);
-        base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
-        base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x08, 0x25, 0xB5, 0x18};
+        base58Prefixes[EXT_SECRET_KEY] = {0x02, 0x87, 0xAB, 0xE3};
 
         bech32_hrp = "ltc";
         mweb_hrp = "ltcmweb";
@@ -204,10 +204,10 @@ public:
         consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000004260a1758f04aa");
         consensus.defaultAssumeValid = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000"); // 1737876
 
-        pchMessageStart[0] = 0xfd;
-        pchMessageStart[1] = 0xd2;
-        pchMessageStart[2] = 0xc8;
-        pchMessageStart[3] = 0xf1;
+        pchMessageStart[0] = 0xfl;
+        pchMessageStart[1] = 0xd7;
+        pchMessageStart[2] = 0xc7;
+        pchMessageStart[3] = 0xf6;
         nDefaultPort = 19335;
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 4;
@@ -229,8 +229,8 @@ public:
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,110);
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,115);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
-        base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x05, 0x25, 0x67, 0xDF};
+        base58Prefixes[EXT_SECRET_KEY] = {0x05, 0x25, 0x93, 0x92};
 
         bech32_hrp = "tltc";
         mweb_hrp = "tmweb";
@@ -269,11 +269,11 @@ public:
         consensus.signet_challenge.clear();
         consensus.nSubsidyHalvingInterval = 150;
         consensus.BIP16Height = 0;
-        consensus.BIP34Height = 500; // BIP34 activated on regtest (Used in functional tests)
+        consensus.BIP34Height = 0; // BIP34 activated on regtest (Used in functional tests)
         consensus.BIP34Hash = uint256();
-        consensus.BIP65Height = 1351; // BIP65 activated on regtest (Used in functional tests)
-        consensus.BIP66Height = 1251; // BIP66 activated on regtest (Used in functional tests)
-        consensus.CSVHeight = 432; // CSV activated on regtest (Used in rpc activation tests)
+        consensus.BIP65Height = 0; // BIP65 activated on regtest (Used in functional tests)
+        consensus.BIP66Height = 0; // BIP66 activated on regtest (Used in functional tests)
+        consensus.CSVHeight = 0; // CSV activated on regtest (Used in rpc activation tests)
         consensus.SegwitHeight = 0; // SEGWIT is always activated on regtest unless overridden
         consensus.MinBIP9WarningHeight = 0;
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -300,11 +300,11 @@ public:
         consensus.nMinimumChainWork = uint256{};
         consensus.defaultAssumeValid = uint256{};
 
-        pchMessageStart[0] = 0xfa;
-        pchMessageStart[1] = 0xbf;
-        pchMessageStart[2] = 0xb5;
-        pchMessageStart[3] = 0xda;
-        nDefaultPort = 19444;
+        pchMessageStart[0] = 0xfg;
+        pchMessageStart[1] = 0xbh;
+        pchMessageStart[2] = 0xb6;
+        pchMessageStart[3] = 0xdf;
+        nDefaultPort = 1998;
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 0;
         m_assumed_chain_state_size = 0;
