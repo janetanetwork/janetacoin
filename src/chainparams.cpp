@@ -113,9 +113,9 @@ public:
         m_assumed_blockchain_size = 40;
         m_assumed_chain_state_size = 2;
 
-        genesis = CreateGenesisBlock(1662282067, 2085461989, 0x1e0ffff0, 1, 10000000 * COIN);
+        genesis = CreateGenesisBlock(1662284696, 2085972123, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("1fb517d5756161a6033c9e3f4b3a9a13a8a192bfff10449bb7c28270b7933f50"));
+        assert(consensus.hashGenesisBlock == uint256S("0x59d4ff50fd4dddb429ebdd5c6c6584fba592d5f1d9c761f5afc0972d8244c091"));
         assert(genesis.hashMerkleRoot == uint256S("007280f346412812a0c5f50a094998a41d8256aa31b63ef764d6e252f8f93532"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
@@ -148,16 +148,16 @@ public:
 
         checkpointData = {
             {
-                {  0, uint256S("1fb517d5756161a6033c9e3f4b3a9a13a8a192bfff10449bb7c28270b7933f50")},
+                {  0, uint256S("0x59d4ff50fd4dddb429ebdd5c6c6584fba592d5f1d9c761f5afc0972d8244c091")},
 
             }
         };
 
         chainTxData = ChainTxData{
             // Data from rpc: getchaintxstats 4096 62e2e3d21343a00994d38a63524867507dbeee6850e8fbf02e9c47a3ccf82f24
-            /* nTime    */ 1662282067,
-            /* nTxCount */ 100225898,
-            /* dTxRate  */ 1.17733189266096
+            /* nTime    */ 1662284696,
+            /* nTxCount */ 0,
+            /* dTxRate  */ 0.0
         };
     }
 };
